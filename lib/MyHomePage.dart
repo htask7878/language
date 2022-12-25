@@ -18,6 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
   ];
 
   String lan = "English";
+
   // List isLanguageList = List.filled(5, false);
   List isLanguageList = [
     true,
@@ -26,7 +27,6 @@ class _MyHomePageState extends State<MyHomePage> {
     false,
     false,
   ];
-
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: (context) {
                           return StatefulBuilder(
                             builder: (context, setState1) {
-                             return Dialog(
+                              return Dialog(
                                 child: SizedBox(
                                   height: 400,
                                   child: Column(
@@ -54,8 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                         separatorBuilder: (context, index) {
                                           return Card(
                                             shape: OutlineInputBorder(
-                                                borderSide:
-                                                BorderSide(color: Colors.grey)),
+                                                borderSide: BorderSide(
+                                                    color: Colors.grey)),
                                             margin: EdgeInsets.all(1),
                                           );
                                         },
@@ -64,24 +64,23 @@ class _MyHomePageState extends State<MyHomePage> {
                                         itemCount: languageList.length,
                                         itemBuilder: (context, index) {
                                           return ListTile(
-                                            title:
-                                            Text("${languageList[index].name}"),
+                                            title: Text(
+                                                "${languageList[index].name}"),
                                             onTap: () {
-                                              isLanguageList[index] = !isLanguageList[index];
+                                              isLanguageList[index] =
+                                                  !isLanguageList[index];
                                               lan = languageList[index].name;
-                                              print("isTrue ===========>>${isLanguageList[index]}");
+                                              print(
+                                                  "isTrue ===========>>${isLanguageList[index]}");
                                               print("Lan ===========>>$lan");
-                                              if(isLanguageList[index]==true)
-                                                {
-                                                  setState(() {});
-                                                }
+                                              setState(() {});
                                               setState1(() {});
                                             },
                                             trailing: isLanguageList[index]
                                                 ? Icon(
-                                              Icons.check,
-                                              color: Colors.orange,
-                                            )
+                                                    Icons.check,
+                                                    color: Colors.orange,
+                                                  )
                                                 : null,
                                           );
                                         },
@@ -90,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         child: IconButton(
                                             onPressed: () {
                                               Navigator.pop(context);
-                                              setState((){});
+                                              setState(() {});
                                             },
                                             icon: Icon(
                                               Icons.arrow_forward,
