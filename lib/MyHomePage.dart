@@ -62,8 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                 "${languageList[index].name}"),
                                             onTap: () {
                                               if (isLanguageList[0] == false) {
-                                                isLanguageList =
-                                                    List.filled(5, false);
+                                                isLanguageList = List.filled(5, false);
                                                 isLanguageList[index] =
                                                     !isLanguageList[index];
                                               } else if (isLanguageList[1] ==
