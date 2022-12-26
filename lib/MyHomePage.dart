@@ -20,13 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String lan = "English";
 
   // List isLanguageList = List.filled(5, false);
-  List isLanguageList = [
-    true,
-    false,
-    false,
-    false,
-    false,
-  ];
+  List isLanguageList = List.filled(5, false);
 
   @override
   Widget build(BuildContext context) {
@@ -67,8 +61,39 @@ class _MyHomePageState extends State<MyHomePage> {
                                             title: Text(
                                                 "${languageList[index].name}"),
                                             onTap: () {
-                                              isLanguageList[index] = !isLanguageList[index];
-                                              lan = languageList[index].name;
+                                              if (isLanguageList[0] == false) {
+                                                isLanguageList =
+                                                    List.filled(5, false);
+                                                isLanguageList[index] =
+                                                    !isLanguageList[index];
+                                              } else if (isLanguageList[1] ==
+                                                  false) {
+                                                isLanguageList =
+                                                    List.filled(5, false);
+                                                isLanguageList[1] =
+                                                    !isLanguageList[1];
+                                              } else if (isLanguageList[2] ==
+                                                  false) {
+                                                isLanguageList =
+                                                    List.filled(5, false);
+                                                isLanguageList[2] =
+                                                    !isLanguageList[2];
+                                              } else if (isLanguageList[3] ==
+                                                  false) {
+                                                isLanguageList =
+                                                    List.filled(5, false);
+                                                isLanguageList[3] =
+                                                    !isLanguageList[3];
+                                              } else if (isLanguageList[4] ==
+                                                  false) {
+                                                isLanguageList =
+                                                    List.filled(5, false);
+                                                isLanguageList[4] =
+                                                    !isLanguageList[4];
+                                              }
+                                              // isLanguageList[index] = !isLanguageList[index];
+                                              // lan = languageList[index].name;
+
                                               print(
                                                   "isTrue ===========>>${isLanguageList[index]}");
                                               print("Lan ===========>>$lan");
